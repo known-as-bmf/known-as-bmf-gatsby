@@ -14,6 +14,10 @@ const Content = styled.div`
   padding: ${`0 ${rhythm(3 / 4)}`};
 `;
 
+const Title = styled.h1`
+  margin: ${`${rhythm(1.2)} 0`};
+`;
+
 const Date = styled.p`
   display: block;
   ${styledScale(-1 / 5)};
@@ -28,7 +32,7 @@ const EmbedPostTemplate = (props: Props) => {
 
   return (
     <Content>
-      <h1>{frontmatter.title}</h1>
+      <Title>{frontmatter.title}</Title>
       <Date>{frontmatter.date}</Date>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </Content>

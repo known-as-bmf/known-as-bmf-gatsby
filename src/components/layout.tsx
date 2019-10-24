@@ -16,7 +16,7 @@ const StyledH1 = styled.h1`
 `;
 
 const StyledH3 = styled.h3`
-  margin-top: 0;
+  margin: 0;
 `;
 
 const StyledLink = styled(FadeLink)`
@@ -29,7 +29,7 @@ const Content = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: ${rhythm(32)};
-  padding: ${`${rhythm(1.5)} ${rhythm(3 / 4)}`};
+  padding: ${`${rhythm(1)} ${rhythm(3 / 4)}`};
 `;
 
 export const Layout = (props: Props) => {

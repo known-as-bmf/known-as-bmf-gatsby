@@ -1,7 +1,6 @@
 import { graphql, PageRendererProps } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import { Bio } from '../components/bio';
 import { Layout } from '../components/layout';
 import { FadeLink } from '../components/link';
 import { SEO } from '../components/seo';
@@ -12,6 +11,10 @@ interface Props extends PageRendererProps {
   pageContext: SitePageContext;
   data: Query;
 }
+
+const Title = styled.h1`
+  margin: ${`${rhythm(1.2)} 0`};
+`;
 
 const Date = styled.p`
   display: block;
@@ -47,7 +50,7 @@ const BlogPostTemplate = (props: Props) => {
         title={frontmatter.title!}
         description={frontmatter.description || excerpt}
       />
-      <h1>{frontmatter.title}</h1>
+      <Title>{frontmatter.title}</Title>
       <Date>{frontmatter.date}</Date>
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <Divider />
