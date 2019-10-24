@@ -15,4 +15,12 @@ install:
 script:
   - npm run build
 deploy:
-  - npm run deploy
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  keep_history: false
+  local_dir: public
+  repo: known-as-bmf/known-as-bmf.github.io
+  target_branch: master
+  on:
+    branch: master
