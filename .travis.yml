@@ -18,7 +18,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GH_TOKEN
-  keep_history: false
+  keep_history: true
   local_dir: public
   repo: known-as-bmf/known-as-bmf.github.io
   target_branch: master
