@@ -37,6 +37,7 @@ for (const user of users) {
 Cette fonctionnalité se retrouve plus tard utilisée à plusieurs endroits de notre application et est donc extraite dans une fonction.
 
 ```js
+// user[] -> user[]
 function olderThan18(users) {
   const result = [];
   for (const user of users) {
