@@ -85,6 +85,6 @@
     "tsc": "tsc --noEmit",
     "lint": "tslint --project .",
     "gql-codegen": "graphql-codegen --config codegen.yml",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "deploy": "gh-pages -d public -r https://$GH_TOKEN@github.com/known-as-bmf/known-as-bmf.github.io.git -b master"
   }
 }
