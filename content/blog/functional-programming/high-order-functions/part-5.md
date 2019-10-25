@@ -4,7 +4,7 @@ date: '2019-10-21T20:00:00+02:00'
 description: ''
 ---
 
-Vous l'aviez peur-être remarqué, mais cette fonction `filterUsers` peut en fait être utilisée pour n'importe quel type de collection, puisque c'est nous qui contrôlons le tableau en entrée et le prédicat !
+Vous l'aviez peut-être remarqué, mais cette fonction `filterUsers` peut en fait être utilisée pour n'importe quel type de collection, puisque c'est nous qui contrôlons le tableau en entrée et le prédicat !
 
 En voici une version générique :
 
@@ -34,4 +34,4 @@ const result = [1, 2, 3, 4].filter(i => i % 2 === 0);
 Il existe d'autres fonctions d'ordre supérieur sur le prototype d'`Array`:
 
 - `map` : `(a[], (a -> b)) -> b[]`
-- `reduce` : `(a[], ((b, a) -> b), b) -> b[]`
+- `reduce` : `(a[], ((b, a) -> b), b) -> b`

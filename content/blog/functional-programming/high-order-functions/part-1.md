@@ -17,7 +17,7 @@ Tous les critères cités ci-dessus sont remplis en JavaScript.
 
 ```js
 // construction à la volée et affectation a une variable
-// (a, b) -> String
+// (String, String) -> String
 const test = (a, b) => `${a} ${b}!`;
 
 // prends en parametre une fonction et en retourne une
