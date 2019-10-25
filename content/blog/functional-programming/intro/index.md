@@ -30,6 +30,11 @@ const test = (a, b) => console.log(a, b);
 
 // déclaration d'une fonction anonyme ayant n paramètres disponibles dans la collection "args"
 const test = (...args) => console.log(...args);
+
+//déclaration d'une fonction anonyme ayant deux paramètres numériques et retournant leur somme
+const add = (a, b) => a + b;
+// équivalent a
+const add = (a, b) => { return a + b; };
 ```
 
 ## Notation de type de fonction
@@ -45,7 +50,7 @@ Prenons comme convention quelques types primitifs : `String`, `Number`, `Boolean
 const add = (a, b) => a + b;
 ```
 
-Les lettres telles que `a`, `b`... représentent un type "_non défini_".
+Les lettres telles que `a`, `b`... représentent un type " _non défini_ ". C'est l'équivalent d'un type générique.
 
 ```js
 // (a, String) -> b
@@ -57,4 +62,7 @@ Il est possible de chainer les fonctions comme par exemple : `a -> b -> c`, ce q
 ```js
 // Number -> Number -> Number
 const add = a => b => a + b;
+
+// a -> String -> b
+const prop = obj => propName => obj[propName];
 ```
