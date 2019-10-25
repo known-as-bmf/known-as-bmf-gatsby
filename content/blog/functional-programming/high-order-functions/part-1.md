@@ -21,7 +21,7 @@ Tous les critères cités ci-dessus sont remplis en JavaScript.
 const test = (a, b) => `${a} ${b}!`;
 
 // prends en parametre une fonction et en retourne une
-// ((a, b, c, …) -> z) -> (..., c, b, a) -> z)
+// ((a, b, c, …) -> z) -> (..., c, b, a) -> z
 const reverseArgs = fn => (...args) => fn(...args.reverse());
 
 const reversedTest = reverseArgs(test);

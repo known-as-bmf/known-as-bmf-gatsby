@@ -49,9 +49,7 @@ Les lettres telles que `a`, `b`... représentent un type "_non défini_".
 
 ```js
 // (a, String) -> b
-function prop(obj, propName) {
-  return obj[propName];
-}
+const prop = (obj, propName) => obj[propName];
 ```
 
 Il est possible de chainer les fonctions comme par exemple : `a -> b -> c`, ce qui signifie _fonction qui prends un `a`, qui retourne une fonction qui prends un `b` qui retourne un `c`_.
