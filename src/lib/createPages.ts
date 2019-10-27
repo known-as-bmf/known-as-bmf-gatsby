@@ -16,6 +16,9 @@ interface PostNode {
   fields: {
     slug: string;
   };
+  frontmatter: {
+    title: string;
+  };
 }
 
 interface Post {
