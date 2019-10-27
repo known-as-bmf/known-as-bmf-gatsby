@@ -1,14 +1,21 @@
 import { graphql, PageRendererProps } from 'gatsby';
-import React from 'react';
-import styled from 'styled-components';
+import React, { Fragment } from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import { Query, SitePageContext } from '../graphql-types';
-import { rhythm, styledScale } from '../utils/typography';
+import { rhythm } from '../utils/typography';
 
 interface Props extends PageRendererProps {
   pageContext: SitePageContext;
   data: Query;
 }
+
+// remove annoying "always-on" y scrollbar in embed
+const GlobalStyle = createGlobalStyle`
+  html {
+    overflow-y: auto;
+  }
+`;
 
 const Content = styled.div`
   padding: ${`0 ${rhythm(3 / 4)}`};
@@ -18,24 +25,19 @@ const Title = styled.h1`
   margin: ${`${rhythm(1.2)} 0`};
 `;
 
-const Date = styled.p`
-  display: block;
-  ${styledScale(-1 / 5)};
-  margin-bottom: ${rhythm(1)};
-  margin-top: ${rhythm(-1)};
-`;
-
 const EmbedPostTemplate = (props: Props) => {
   const post = props.data.markdownRemark!;
   const frontmatter = post.frontmatter!;
   const html = post.html!;
 
   return (
-    <Content>
-      <Title>{frontmatter.title}</Title>
-      <Date>{frontmatter.date}</Date>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </Content>
+    <Fragment>
+      <GlobalStyle />
+      <Content>
+        <Title>{frontmatter.title}</Title>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </Content>
+    </Fragment>
   );
 };
 
