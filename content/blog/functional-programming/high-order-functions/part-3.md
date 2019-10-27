@@ -1,6 +1,6 @@
 ---
 title: 'Functional Programming — High-Order Functions (Part 3)'
-date: '2019-10-21T20:00:00+02:00'
+date: '2019-10-21T23:00:00+02:00'
 description: ''
 ---
 

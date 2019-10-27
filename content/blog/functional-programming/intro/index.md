@@ -34,7 +34,9 @@ const test = (...args) => console.log(...args);
 //déclaration d'une fonction anonyme ayant deux paramètres numériques et retournant leur somme
 const add = (a, b) => a + b;
 // équivalent a
-const add = (a, b) => { return a + b; };
+const add = (a, b) => {
+  return a + b;
+};
 ```
 
 ## Notation de type de fonction

@@ -1,6 +1,6 @@
 ---
 title: 'Functional Programming — High-Order Functions (Part 5)'
-date: '2019-10-21T20:00:00+02:00'
+date: '2019-10-22T01:00:00+02:00'
 description: ''
 ---
 
@@ -33,5 +33,28 @@ const result = [1, 2, 3, 4].filter(i => i % 2 === 0);
 
 Il existe d'autres fonctions d'ordre supérieur sur le prototype d'`Array`:
 
-- `map` : `(a[], (a -> b)) -> b[]`
-- `reduce` : `(a[], ((b, a) -> b), b) -> b`
+- `map` : transforme une collection de type `a` en collection de type `b`.
+
+```js
+// (a[], (a -> b)) -> b[]
+function map(list, trans) {
+  const result = [];
+  for (const item of list) {
+    result.push(trans(item));
+  }
+  return result;
+}
+```
+
+- `reduce` : transforme une collection de type `a` en **une** valeur de type `b`. Peut être vu comme un accumulateur.
+
+```js
+// (a[], ((b, a) -> b), b) -> b
+function reduce(list, reducer, initialValue) {
+  let result = initialValue;
+  for (const item of list) {
+    result = reducer(result, item);
+  }
+  return result;
+}
+```
