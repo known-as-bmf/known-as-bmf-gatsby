@@ -1,6 +1,8 @@
 import { graphql, PageRendererProps, useStaticQuery } from 'gatsby';
+import { DateTime } from 'luxon';
 import React from 'react';
 import styled from 'styled-components';
+import { OriginalDate } from '../components/date';
 import { Layout } from '../components/layout';
 import { FadeLink } from '../components/link';
 import { SEO } from '../components/seo';
@@ -33,7 +35,7 @@ const BlogIndex = (props: Props) => {
               slug
             }
             frontmatter {
-              date(formatString: "MMMM DD, YYYY")
+              date
               title
               description
             }
@@ -65,7 +67,7 @@ const BlogIndex = (props: Props) => {
             <Title>
               <StyledLink to={slug}>{title}</StyledLink>
             </Title>
-            <small>{frontmatter.date}</small>
+            <OriginalDate date={frontmatter.date} format={DateTime.DATE_FULL} />
             <p
               dangerouslySetInnerHTML={{
                 __html: frontmatter.description || excerpt,

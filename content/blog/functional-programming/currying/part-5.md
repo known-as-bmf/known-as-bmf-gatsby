@@ -28,6 +28,8 @@ const arity = add.length;
 // arity = 2
 ```
 
+Pour une curryfication correcte, il est nécessaire de connaitre le nombre d'arguments d'une fonction pour savoir lorsqu'elle peut être appelée.
+
 Et maintenant, le saint Graal du currying :
 
 ```js
@@ -38,3 +40,13 @@ const curry = (fn, arity = fn.length, ...args) => {
   return curry.bind(null, fn, arity, ...args);
 };
 ```
+
+C'est une fonction d'ordre supérieur qui prends une fonction et en retourne une version curriée. Quelques explications sur ce code qui peut paraître compliqué :
+
+- les arguments :
+  - `fn` la fonction à currier
+  - `arity` l'arité de la fonction. Il n'est pas requis et a comme valeur par défaut `fn.length`.
+  - `...args` une liste d'arguments à passer a `fn`
+- le corps :
+  - si les arguments passés dans `...args` sont assez nombreux pour satisfaire l'arité voulue, on appelle `fn`
+  - sinon, on refais l'appel a curry, mais cette fois ci en pré-remplissant `...args` avec les arguments donnés

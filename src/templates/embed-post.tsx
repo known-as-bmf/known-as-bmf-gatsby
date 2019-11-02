@@ -18,11 +18,12 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Content = styled.div`
-  padding: ${`0 ${rhythm(3 / 4)}`};
+  padding: ${rhythm(3 / 4)};
 `;
 
 const Title = styled.h1`
-  margin: ${`${rhythm(1.2)} 0`};
+  margin: 0;
+  padding-bottom: ${rhythm(1)};
 `;
 
 const EmbedPostTemplate = (props: Props) => {
@@ -50,7 +51,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
       }
     }
   }

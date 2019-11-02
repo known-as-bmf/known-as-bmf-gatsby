@@ -11,12 +11,13 @@ interface Props extends PageRendererProps {
 
 const StyledH1 = styled.h1`
   ${styledScale(1.5)};
-  margin-bottom: ${rhythm(1.5)};
-  margin-top: 0;
+  margin: 0;
+  padding-bottom: ${rhythm(1.5)};
 `;
 
 const StyledH3 = styled.h3`
   margin: 0;
+  padding-bottom: ${rhythm(1)};
 `;
 
 const StyledLink = styled(FadeLink)`

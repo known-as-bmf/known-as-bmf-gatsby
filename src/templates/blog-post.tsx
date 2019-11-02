@@ -1,6 +1,8 @@
 import { graphql, PageRendererProps } from 'gatsby';
-import React from 'react';
+import { DateTime } from 'luxon';
+import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
+import { OriginalDate } from '../components/date';
 import { Layout } from '../components/layout';
 import { FadeLink } from '../components/link';
 import { SEO } from '../components/seo';
@@ -13,14 +15,13 @@ interface Props extends PageRendererProps {
 }
 
 const Title = styled.h1`
-  margin: ${`${rhythm(1.2)} 0`};
+  margin: 0;
 `;
 
-const Date = styled.p`
+const StyledOriginalDate = styled(OriginalDate)`
   display: block;
   ${styledScale(-1 / 5)};
-  margin-bottom: ${rhythm(1)};
-  margin-top: ${rhythm(-(1 / 2))};
+  padding-bottom: ${rhythm(1)};
 `;
 
 const Divider = styled.hr`
@@ -35,7 +36,7 @@ const PostNavigator = styled.ul`
   padding: 0;
 `;
 
-const BlogPostTemplate = (props: Props) => {
+const BlogPostTemplate: FunctionComponent<Props> = props => {
   const post = props.data.markdownRemark!;
   const excerpt = post.excerpt!;
   const frontmatter = post.frontmatter!;
@@ -51,7 +52,7 @@ const BlogPostTemplate = (props: Props) => {
         description={frontmatter.description || excerpt}
       />
       <Title>{frontmatter.title}</Title>
-      <Date>{frontmatter.date}</Date>
+      <StyledOriginalDate date={frontmatter.date} format={DateTime.DATE_FULL} />
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <Divider />
       {/* <Bio /> */}
@@ -91,7 +92,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date
         description
       }
     }
