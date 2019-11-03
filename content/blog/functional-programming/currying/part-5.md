@@ -49,4 +49,4 @@ C'est une fonction d'ordre supérieur qui prends une fonction et en retourne une
   - `...args` une liste d'arguments à passer a `fn`
 - le corps :
   - si les arguments passés dans `...args` sont assez nombreux pour satisfaire l'arité voulue, on appelle `fn`
-  - sinon, on refais l'appel a curry, mais cette fois ci en pré-remplissant `...args` avec les arguments donnés
+  - sinon, une version de curry déjà partiellement appliquée avec `fn`, `arity` et les arguments précédemment donnés est retournée
