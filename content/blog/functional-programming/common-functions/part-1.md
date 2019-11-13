@@ -22,14 +22,14 @@ const identity = x => x;
 const always = x => () => x;
 ```
 
-- `map` applique une fonction de transformation a chaque élément d'une collection.
+- `map` applique une fonction de transformation a chaque élément d'une collection. Parfois appelé `select`.
 
 ```js
 // (a -> b) -> a[] -> b[]
 const map = mapFn => list => list.map(mapFn);
 ```
 
-- `filter` filtre une collection avec un prédicat
+- `filter` filtre une collection avec un prédicat. Parfois appelé `where`.
 
 ```js
 // (a -> Boolean) -> a[] -> a[]
@@ -58,3 +58,4 @@ const all = allFn => list => list.every(allFn);
 ```
 
 - `flatMap`
+- `reduce`
