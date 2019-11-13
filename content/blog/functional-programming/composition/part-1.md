@@ -26,6 +26,22 @@ const transformation = compose(
 );
 
 const result = transformation([1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
+// result = [2, 2, 4, 6, 10, 16]
 ```
 
-Une tache récurrente lors de n'importe quel développement est d'appliquer plusieurs transformations à une valeur.
+Une chose intéressante à noter et contre-intuitive pour un développeur : la liste des transformations se lit du **bas vers le haut**. Il existe une fonction, souvent appelée `pipe`, qui fait la même chose mais avec ses arguments inversés (transformation du haut vers le bas).
+
+```js
+// ((a -> b), (b -> c)) -> a -> c
+const pipe = (f, g) => x => g(f(x));
+
+const transformation = pipe(
+  list => list.filter(i => i < 10),
+  list => list.map(i => i * 2)
+);
+
+const result = transformation([1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
+// result = [2, 2, 4, 6, 10, 16]
+```
+
+Nous allons utiliser `compose` pour la suite.
