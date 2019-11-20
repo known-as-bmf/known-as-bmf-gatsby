@@ -12,7 +12,7 @@ Avant de commencer, voici quelques pré-requis afin de tout comprendre.
 
 Nous allons utiliser JavaScript (et plus particulièrement la version ES6) pour les exemples dans cette introduction. JavaScript est un bon candidat car c'est un langage très dynamique, partiellement fonctionnel qui reste compréhensible par une grande majorité des développeurs familiers avec n'importe quel langage impératif (C#, Java, Python...).
 
-Si vous ne pensez pas avoir le niveau requis en JS / ES6, n'hésitez pas a suivre les cours dédiés [ici]().
+<!-- Si vous ne pensez pas avoir le niveau requis en JS / ES6, n'hésitez pas a suivre les cours dédiés [ici](). -->
 
 Quelques rappels sur ES6:
 
