@@ -17,7 +17,7 @@ Quelques moyens d'adopter ce comportement en JavaScript :
 - Utiliser `const` pour repérer les réassignations grâce à un transpileur / éditeur.
   - marche très bien avec les types primitifs mais n'empêche pas le contenu des objets complexes d'être réassigné
 - Lors de manipulation d'objets ou de collections
-  - faire une [**copie superficielle**](https://fr.wikipedia.org/wiki/Copie_d%27un_objet#Copie_superficielle) (_shallow copies_) par [décomposition](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Syntaxe_d%C3%A9composition) (_spreading_)
+  - faire une [copie superficielle](https://fr.wikipedia.org/wiki/Copie_d%27un_objet#Copie_superficielle) (_shallow copy_) par [décomposition](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Syntaxe_d%C3%A9composition) (_spreading_)
   - utiliser [`Object.freeze`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/freeze). Attention, cette technique, comme la décomposition, ne gèle que **superficiellement**.
   - Faire une copie profonde (_deep copy_). très efficace mais peut consommer beaucoup des ressources en fonction de la taille de l'objet.
 
