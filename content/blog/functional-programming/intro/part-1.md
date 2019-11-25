@@ -1,5 +1,5 @@
 ---
-title: 'Functional Programming — Introduction'
+title: 'Functional Programming — Introduction (Part 1)'
 date: '2019-10-21T20:00:00+02:00'
 description: ''
 ---
