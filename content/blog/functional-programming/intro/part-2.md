@@ -19,7 +19,7 @@ Quelques moyens d'adopter ce comportement en JavaScript :
 - Lors de manipulation d'objets ou de collections
   - faire une [copie superficielle](https://fr.wikipedia.org/wiki/Copie_d%27un_objet#Copie_superficielle) (_shallow copy_) par [décomposition](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Syntaxe_d%C3%A9composition) (_spreading_)
   - utiliser [`Object.freeze`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/freeze). Attention, cette technique, comme la décomposition, ne gèle que **superficiellement**.
-  - Faire une copie profonde (_deep copy_). très efficace mais peut consommer beaucoup des ressources en fonction de la taille de l'objet.
+  - faire une copie profonde (_deep copy_). très efficace mais peut consommer beaucoup des ressources en fonction de la taille de l'objet.
 
 Ce sont les techniques _superficielles_ qui sont le plus souvent utilisées, il faut néanmoins être très vigilant avec.
 
