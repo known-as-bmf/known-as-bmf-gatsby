@@ -27,13 +27,13 @@ Ce sont les techniques _superficielles_ qui sont le plus souvent utilisées, il 
 const user = { tri: 'JAV', address: { street: 'rue du moulin' } };
 const userCopy = { ...user, tri: 'FOO' };
 // userCopy = { tri: 'FOO', address: { street: 'rue du moulin' }}
-// ici, les propriétés address de user et userCopy pointent toujours
+// ici, la propriété "address" de user et userCopy pointe toujours
 // vers le même objet en mémoire
 ```
 
 ## Pureté / Idempotence
 
-Une fonction pure est une fonction qui remplis les critères suivants :
+Une fonction pure est une fonction qui remplit les critères suivants :
 
 - Pour les mêmes valeurs d'entrée, elle retournera toujours le même résultat
   - pas de dépendance a des variables globales ou non locales
