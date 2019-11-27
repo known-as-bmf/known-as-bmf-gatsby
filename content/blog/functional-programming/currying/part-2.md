@@ -15,7 +15,7 @@ const add = a => b => a + b;
 
 Nous avons transformé les fonctions pour qu'elles acceptent leurs paramètres les uns après les autres, en retournant des fonctions "temporaires" entre chaque. C'est ce qu'on appelle le **currying**.
 
-Elles sont utilisable ainsi :
+Elles sont utilisables ainsi :
 
 ```js
 const four = add(2)(2);
@@ -34,7 +34,7 @@ const twoTimes = mult(2);
 const tenTimes = mult(10);
 ```
 
-Ici, nous "pré-remplissons" la valeur du paramètre `a` pour créer une nouvelle fonction qui attends le deuxième paramètre `b`. C'est l'**application partielle** des paramètres.
+Ici, nous "pré-remplissons" la valeur du paramètre `a` pour créer une nouvelle fonction qui attend le deuxième paramètre `b`. C'est l'**application partielle** des paramètres.
 
 Nous n'avons même plus besoin de déclarer ces fonctions, nous pouvons directement écrire :
 
