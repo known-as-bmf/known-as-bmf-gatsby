@@ -8,9 +8,9 @@ Il y a quelques concepts indispensables à connaitre avant de commencer.
 
 ## Immutabilité
 
-Une valeur immuable est une valeur qui change pas de valeur après sa définition. Pour faire muter cette valeur, il faut d'abord en faire une copie.
+Une valeur immuable est une valeur qui ne change pas de valeur après sa définition. Pour faire muter cette valeur, il faut d'abord en faire une copie.
 
-L'intérêt est d'éviter les effets de bords lorsqu'une valeur est utilisée dans différent traitements et de garder tous les états d'une valeurs dans le temps pour pouvoir rejouer des traitements ou revenir à un état précédent.
+L'intérêt est d'éviter les effets de bord lorsqu'une valeur est utilisée dans différents traitements et de garder tous les états d'une valeurs dans le temps pour pouvoir rejouer des traitements ou revenir à un état précédent.
 
 Quelques moyens d'adopter ce comportement en JavaScript :
 
@@ -33,12 +33,12 @@ const userCopy = { ...user, tri: 'FOO' };
 
 ## Pureté / Idempotence
 
-Une fonction pure est une fonction qui remplis les critères suivants :
+Une fonction pure est une fonction qui remplit les critères suivants :
 
 - Pour les mêmes valeurs d'entrée, elle retournera toujours le même résultat
-  - pas de dépendance a des variables globales ou non locales
-- Elle n'a pas d'effets de bords
-  - pas d'appels base de donnée
+  - pas de dépendance à des variables globales ou non locales
+- Elle n'a pas d'effets de bord
+  - pas d'appels en base de données
   - pas de mutation de variables globales / non locales
 
 La pureté apporte plusieurs bénéfices :
