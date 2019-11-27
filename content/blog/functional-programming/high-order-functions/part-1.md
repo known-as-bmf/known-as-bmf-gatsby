@@ -6,7 +6,7 @@ description: ''
 
 Dans le paradigme fonctionnel, les fonctions sont des **[objets de première classe](https://fr.wikipedia.org/wiki/Objet_de_premi%C3%A8re_classe)**. Cela signifie qu'elles peuvent être :
 
-- Construites à la volée (aussi appelées **[fonction anonyme ou fonction lambda](https://fr.wikipedia.org/wiki/Fonction_anonyme)**)
+- Construites à la volée (aussi appelées **[fonctions anonymes ou fonctions lambda](https://fr.wikipedia.org/wiki/Fonction_anonyme)**)
 - Affectées à des variables
 - Utilisées comme paramètre d'une fonction
 - Retournées par une fonction
