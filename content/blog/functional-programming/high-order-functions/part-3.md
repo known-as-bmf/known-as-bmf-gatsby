@@ -26,7 +26,7 @@ const result18 = olderThan(users, 18);
 const result30 = olderThan(users, 30);
 ```
 
-Dans le lot de nouvelles fonctionnalités, il y a aussi besoin de filtrer les utilisateurs abonné ou non. Et pire encore, le marketing souhaite connaitre les utilisateurs majeurs **et** abonnés.
+Dans le lot de nouvelles fonctionnalités, il y a aussi besoin de filtrer les utilisateurs abonnés ou non. Et pire encore, le marketing souhaite connaitre les utilisateurs majeurs **et** abonnés.
 
 Construisons une deuxième fonction :
 
