@@ -20,7 +20,7 @@ const users = [
 ];
 ```
 
-Notre besoin fonctionnel requiert de filtrer cette liste et de trouver les utilisateurs dont l'âge est supérieur ou égal à 18 ans.
+Notre besoin fonctionnel requiert de filtrer cette liste et trouver les utilisateurs dont l'âge est supérieur ou égal à 18 ans.
 
 L'implémentation naïve est:
 

@@ -41,7 +41,7 @@ const add = (a, b) => {
 
 ## Notation de type de fonction
 
-Le javascript ne possédant pas de types explicites, il est parfois difficile de comprendre ce qu'attends une fonction en paramètres et ce qu'elle retourne.
+Le javascript ne possédant pas de types explicites, il est parfois difficile de comprendre ce qu'attend une fonction en paramètres et ce qu'elle retourne.
 
 Pour la suite, nous allons utiliser une notation sous forme de commentaire afin d'expliciter la signature des fonctions.
 
@@ -59,7 +59,7 @@ Les lettres telles que `a`, `b`... représentent un type " _non défini_ ". C'es
 const prop = (obj, propName) => obj[propName];
 ```
 
-Il est possible de chainer les fonctions comme par exemple : `a -> b -> c`, ce qui signifie _fonction qui prends un `a`, qui retourne une fonction qui prends un `b` qui retourne un `c`_.
+Il est possible de chaîner les fonctions comme par exemple : `a -> b -> c`, ce qui signifie _fonction qui prend un `a`, qui retourne une fonction qui prend un `b` qui retourne un `c`_.
 
 ```js
 // Number -> Number -> Number

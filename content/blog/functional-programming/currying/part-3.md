@@ -18,7 +18,7 @@ const clamped = [0, 2, 5, 1, 3].map(clamp(0)(2));
 // clamped = [0, 2, 2, 1, 2]
 ```
 
-L'utilisation en tant que fonction classique est tout aussi bancal :
+L'utilisation en tant que fonction classique est tout aussi bancale :
 
 ```js
 const clamped = clamp(0)(100)(89);

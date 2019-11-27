@@ -6,9 +6,7 @@ description: ''
 
 Ajoutons un outil inestimable à notre arsenal : la **[composition de fonctions](https://fr.wikipedia.org/wiki/Composition_de_fonctions)**.
 
-Commençons par un peu de mathématiques. Il existe un operateur "∘" qui permet de composer des fonctions tel que :
-
-Pour deux fonctions `f : a -> b` et `g : b -> c` la composition `(g ∘ f)` produit une nouvelle fonction `a -> c`. En d'autres termes : `(g ∘ f)(x) = g(f(x))`.
+Commençons par un peu de mathématiques. Il existe un operateur "∘" (dit "rond") qui permet de composer des fonctions telles que pour deux fonctions `f : a -> b` et `g : b -> c`, la composition `(g ∘ f)` produit une nouvelle fonction `a -> c`. En d'autres termes : `(g ∘ f)(x) = g(f(x))`.
 
 Une implémentation naïve de cet operateur en JavaScript est :
 
