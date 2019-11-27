@@ -47,4 +47,4 @@ const clamped4 = clamp(0, 100, 89);
 // clamped4 = 89
 ```
 
-Néanmoins la quantité de code nécessaire (et à réécrire pour chaque fonction), laisse a désirer.
+Néanmoins la quantité de code nécessaire (et à réécrire pour chaque fonction) laisse a désirer.
