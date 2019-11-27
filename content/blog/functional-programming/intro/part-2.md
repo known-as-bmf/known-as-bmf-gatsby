@@ -10,7 +10,7 @@ Il y a quelques concepts indispensables à connaitre avant de commencer.
 
 Une valeur immuable est une valeur qui ne change pas de valeur après sa définition. Pour faire muter cette valeur, il faut d'abord en faire une copie.
 
-L'intérêt est d'éviter les effets de bords lorsqu'une valeur est utilisée dans différents traitements et de garder tous les états d'une valeur dans le temps pour pouvoir rejouer des traitements ou revenir à un état précédent.
+L'intérêt est d'éviter les effets de bord lorsqu'une valeur est utilisée dans différents traitements et de garder tous les états d'une valeur dans le temps pour pouvoir rejouer des traitements ou revenir à un état précédent.
 
 Quelques moyens d'adopter ce comportement en JavaScript :
 
@@ -37,7 +37,7 @@ Une fonction pure est une fonction qui remplit les critères suivants :
 
 - Pour les mêmes valeurs d'entrée, elle retournera toujours le même résultat
   - pas de dépendance à des variables globales ou non locales
-- Elle n'a pas d'effet de bord
+- Elle n'a pas d'effets de bord
   - pas d'appel à une base de donnée
   - pas de mutation de variables globales / non locales
 
