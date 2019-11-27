@@ -12,7 +12,7 @@ Voici un problème très simple qui illustrera ces concepts : nous avons une lis
 const arr = [1, 2, 3, 2, 4, 6, 5, 8];
 ```
 
-dont nous souhaitons multiplier tous les éléments par `10`. Créons une fonction pour simplifier le travail.
+Nous souhaitons multiplier tous les éléments par `10`. Créons une fonction pour simplifier le travail.
 
 ```js
 // (Number, Number) -> Number
@@ -35,7 +35,7 @@ const tenTimes = b => mult(10, b);
 const result = arr.map(tenTimes);
 ```
 
-Malheureusement, s'il faut enchainer plusieurs traitements, le code nécessaire croit assez rapidement.
+Malheureusement, s'il faut enchainer plusieurs traitements, le code nécessaire croît assez rapidement.
 
 ```js
 // (Number, Number) -> Number

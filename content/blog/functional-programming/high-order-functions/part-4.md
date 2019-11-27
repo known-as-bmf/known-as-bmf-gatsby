@@ -39,4 +39,4 @@ Il est aussi possible de filtrer "à la volée" en utilisant une fonction anonym
 const result = filterUsers(users, user => user.age > 55);
 ```
 
-Pas mal hein ?
+Pas mal, hein ?

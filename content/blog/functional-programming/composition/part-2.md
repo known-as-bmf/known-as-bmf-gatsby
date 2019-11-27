@@ -13,7 +13,7 @@ const transformation = compose(
 );
 ```
 
-Il est possible d'utiliser les fonction que nous avons énoncé dans la partie `Common functions` :
+Il est possible d'utiliser les fonctions que nous avons énoncées dans la partie `Common functions` :
 
 ```js
 const transformation = compose(
