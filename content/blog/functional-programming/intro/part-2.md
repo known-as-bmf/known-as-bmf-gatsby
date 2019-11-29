@@ -8,7 +8,9 @@ Il y a quelques concepts indispensables à connaitre avant de commencer.
 
 ## Immutabilité
 
-Une valeur immuable est une valeur qui ne change pas de valeur après sa définition. Pour faire muter cette valeur, il faut d'abord en faire une copie.
+Une variable immuable est une variable qui ne doit pas changer après sa définition. C'est surtout pertinent pour les objets, et les collections car les primitives sont généralement manipulées par valeur.
+
+Pour faire muter une variable immuable, il faut d'abord en faire une copie, puis transformer cette copie.
 
 L'intérêt est d'éviter les effets de bord lorsqu'une valeur est utilisée dans différents traitements et de garder tous les états d'une valeur dans le temps pour pouvoir rejouer des traitements ou revenir à un état précédent.
 
