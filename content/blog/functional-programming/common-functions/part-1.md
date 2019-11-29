@@ -8,14 +8,14 @@ Une des choses très intimidante quand on débute dans la programmation fonction
 
 Voici une liste de fonctions classiques et une implémentation naïve. Certaines ont déjà une implémentation en JavaScript standard, mais il est très utile d'en créer une version fonctionnelle pour la suite.
 
-- `identity` une fonction qui prends un argument et le retourne tel quel. parfois appelée `id`.
+- `identity` une fonction qui prends un paramètre et le retourne tel quel. parfois appelée `id`.
 
 ```js
 // a -> a
 const identity = x => x;
 ```
 
-- `always` une fonction qui prends un argument et retourne une fonction qui retournera toujours cette valeur. Parfois appelée `constant`.
+- `always` une fonction qui prends une valeur en paramètre et retourne une fonction qui retournera toujours cette valeur. Parfois appelée `constant`.
 
 ```js
 // a -> () -> a
