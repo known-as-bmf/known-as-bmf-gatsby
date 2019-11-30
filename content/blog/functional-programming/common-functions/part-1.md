@@ -75,15 +75,11 @@ const result = valuePlusDouble([1, 2, 3, 4]);
 
 ```js
 // ((a, b) -> a) -> a -> b[]
-const reduce = reduceFn => defaultValue => list =>
-  list.reduce(reduceFn, defaultValue);
+const reduce = reduceFn => defaultValue => list => list.reduce(reduceFn, defaultValue);
 
 // usage
 // Number[] -> Number
-const sum = reduce(
-  (accumulator, currentValue) => accumulator + currentValue,
-  0
-);
+const sum = reduce((accumulator, currentValue) => accumulator + currentValue)(0);
 
 const result = sum([1, 2, 3, 4, 5]);
 // result = 15
