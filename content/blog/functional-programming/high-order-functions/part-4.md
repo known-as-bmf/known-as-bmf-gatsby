@@ -10,8 +10,7 @@ Essayons d'extraire la condition de la partie précédente dans une fonction :
 
 ```js
 // user -> Boolean
-const olderThan18AndSubscribed = user =>
-  user.age >= 18 && user.subscribed === true;
+const olderThan18AndSubscribed = user => user.age >= 18 && user.subscribed === true;
 ```
 
 On appelle ce genre de fonction (vérifiant une condition sur ses paramètres d'entrée) un **prédicat**.

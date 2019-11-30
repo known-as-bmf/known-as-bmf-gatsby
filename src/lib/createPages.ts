@@ -1,14 +1,5 @@
 import path from 'path';
-import {
-  aperture,
-  chain,
-  compose,
-  forEach,
-  insertAll,
-  map,
-  repeat,
-  reverse,
-} from 'ramda';
+import { aperture, chain, compose, forEach, insertAll, map, repeat, reverse } from 'ramda';
 
 import { GatsbyCreatePages, PageInput } from '../types';
 
@@ -25,18 +16,12 @@ interface Post {
   node: PostNode;
 }
 
-export const createPages: GatsbyCreatePages = async ({
-  graphql,
-  boundActionCreators,
-}) => {
+export const createPages: GatsbyCreatePages = async ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
   const allMarkdown = await graphql(`
     {
-      allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: ASC }
-        limit: 1000
-      ) {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }, limit: 1000) {
         edges {
           node {
             fields {
@@ -91,7 +76,10 @@ export const createPages: GatsbyCreatePages = async ({
     ]),
     aperture(3),
     insertAll(1)
-  )(map(p => p.node, posts), repeat(null, 2));
+  )(
+    map(p => p.node, posts),
+    repeat(null, 2)
+  );
 
   return null;
 };

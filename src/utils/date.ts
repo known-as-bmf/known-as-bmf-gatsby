@@ -22,7 +22,5 @@ export const parseDate = (
   throw new Error('Could not parse date');
 };
 
-const is = <T extends object>(
-  ctor: new (...args: any[]) => T,
-  val: any
-): val is T => ris(ctor, val);
+const is = <T extends object>(ctor: new (...args: any[]) => T, val: any): val is T =>
+  ris(ctor, val);

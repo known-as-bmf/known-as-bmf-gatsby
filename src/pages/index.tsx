@@ -50,10 +50,7 @@ const BlogIndex = (props: Props) => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-      />
+      <SEO title="All posts" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       {/* <Bio /> */}
       {posts.map(({ node }: { node: MarkdownRemark }) => {
         const frontmatter = node!.frontmatter!;

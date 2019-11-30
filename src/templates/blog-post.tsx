@@ -47,10 +47,7 @@ const BlogPostTemplate: FunctionComponent<Props> = props => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO
-        title={frontmatter.title!}
-        description={frontmatter.description || excerpt}
-      />
+      <SEO title={frontmatter.title!} description={frontmatter.description || excerpt} />
       <Title>{frontmatter.title}</Title>
       <StyledOriginalDate date={frontmatter.date} format={DateTime.DATE_FULL} />
       <div dangerouslySetInnerHTML={{ __html: html }} />
