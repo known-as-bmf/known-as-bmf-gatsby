@@ -57,5 +57,34 @@ const any = anyFn => list => list.some(anyFn);
 const all = allFn => list => list.every(allFn);
 ```
 
-- `flatMap`
-- `reduce`
+- `flatMap` comme `map`, applique une fonction de transformation à chaque éléments d'une collection. Cette transformation **doit** retourner une collection, qui sera concaténée a la collection finale. Parfois appelée `chain` ou `selectMany`.
+
+```js
+// (a -> b[]) -> a[] -> b[]
+const flatMap = mapFn => list => list.flatMap(mapFn);
+
+// usage
+// Number[] -> Number[]
+const valuePlusDouble = flatMap(value => [value, value * 2]);
+
+const result = valuePlusDouble([1, 2, 3, 4]);
+// result = [1, 2, 2, 4, 3, 6, 4, 8]
+```
+
+- `reduce` transforme une collection en une seule valeur. Chaque valeur de la collection passe dans la fonction de transformation ainsi qu'un accumulateur. La fonction de transformation doit retourner la nouvelle valeur de l'accumulateur. Le deuxième paramètre est une valeur par défaut pour l'accumulateur. Parfois appelée `aggregate`.
+
+```js
+// ((a, b) -> a) -> a -> b[]
+const reduce = reduceFn => defaultValue => list =>
+  list.reduce(reduceFn, defaultValue);
+
+// usage
+// Number[] -> Number
+const sum = reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0
+);
+
+const result = sum([1, 2, 3, 4, 5]);
+// result = 15
+```
